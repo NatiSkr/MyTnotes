@@ -1,0 +1,38 @@
+main {
+    text-align: center;
+    margin: 1em;
+}
+h1 {
+    padding: 1em;
+}
+h2 {
+    padding: 1em;
+    border-radius: 0.5em;
+    background-color: lightgoldenrodyellow;
+}
+.teorema {
+    padding: 1em;
+    border-radius: 0.5em;
+    background-color:rgb(230, 230, 230);
+}
+.casos {
+    padding: 1em;
+    background-color: rgb(230, 230, 230);
+    border-radius: 1em;
+    width:80vw;
+    /*Center div*/
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1em;
+}
+.casos ol {
+    margin: 0;
+    padding-left: 0;
+    padding-top: 1em;
+}
+.cursive {
+    font-style: italic;
+}
+.box-equation {
+    color: brown;
+}

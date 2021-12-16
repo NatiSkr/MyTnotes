@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <!--Responsive-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="style.css" rel="stylesheet">
+    <!--MathJax-->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <title>MyTnotes</title>
+  </head>
+
+
+
+<body>
+
+    <!--offcanvas nav-->
+    <nav class="navbar navbar-light bg-light fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#h1-title">Apuntes de Mecánica y Termodinámica</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Navegación de temas</h5>
+                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+                <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Volver al inicio</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="offcanvasNavbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Seleccionar un tema
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="offcanvasNavbarDropdown">
+                    <li><a class="dropdown-item" href="#trabajo">Trabajo</a></li>
+                    <li><a class="dropdown-item" href="#energia-cinetica">Energía cinética</a></li>
+                    <li><a class="dropdown-item" href="#energia-potencial">Energía potencial</a></li>
+                    <li>
+                        <hr class="dropdown-divider">
+                    </li>
+                    <li><a class="dropdown-item" href="#">Ver programa</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Informar un error</a>
+                    </li>
+                </ul>
+                <form class="d-flex">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Buscar</button>
+                </form>
+            </div>
+            </div>
+        </div>
+        </nav>
+
+    <main>
+    <h1 id="h1-title">Desarrollo teórico de temas</h1>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <!--The default math delimiters are $$...$$ and \[...\] for displayed mathematics, and \(...\) for in-line mathematics-->
+
+    <section>
+        <h2 id="trabajo">Trabajo</h2>
+    </section>
+
+    <section>
+        <h2 id="energia-cinetica">Teorema de la energía cinética</h2>
+        <p class="teorema">
+            El teorema de la energía cinética establece que 
+            <span class="cursive">el trabajo realizado por la fuerza neta (suma de todas las fuerzas) aplicada a 
+            una partícula es igual al cambio que experimenta la energía cinética de dicha partícula.</span>
+        </p>
+        <p>Depende del movimiento del cuerpo</p>
+    
+        <div class="demo"> 
+        <h5>
+            Demostración
+        </h5>
+        <p>
+            Considerar un cuerpo de masa \(m\) que se desplaza por la aplicación de una fuerza neta constante \(F\) 
+            una distancia \(s\) desde \(s_1\) con una velocidad \(v_1\) hasta una posición \(s_2\) con velocidad \(v_2\) 
+            y siendo \(s_2>s_1\) 
+        </p>
+    
+            El trabajo realizado se expresa como:
+            $$\int_{s_1}^{s_2}\,dW=\int_{s_1}^{s_2} F \,ds$$
+    
+            Por mecánica de Newton
+            $$W_{1\rightarrow2}=\int_{s_1}^{s_2} m \cdot a \,ds$$
+    
+            $$W_{1\rightarrow2}= m \int_{s_1}^{s_2} \frac{\,dv}{\,dt} \,ds$$
+    
+            La expresión \(\frac{\,ds}{\,dt}\) da cuenta de la velocidad infinitesimal de desplazamiento del cuerpo:
+            $$W_{1\rightarrow2}= m \int_{v_1}^{v_2} v \,dv$$
+    
+            $$W_{1\rightarrow2}= m \tfrac{v^2}{2} \Big|_{v_1}^{v_2}$$
+    
+            $$W_{1\rightarrow2}= \frac{1}{2} m (v_2^2 - v_1^2)$$
+    
+            Sea <span class="box-equation">\(K=\frac{1}{2} m v_i^2\)</span> la manifestación no vectorial de la 2° ley de Newton, 
+            se define al cambio de energía cinética como:
+    
+            $$W_{1\rightarrow2} = K_2 - K_1 = \Delta K$$
+        </div>
+    
+        <div class="casos">
+        <h6>
+            Cambio nulo de velocidad entre posiciones
+        </h6>
+        <p>
+            Si no hubiera cambio de velocidad entre las posiciones \(x_1\) y \(x_2\) entonces \(\Delta K=0\)     
+            y por ende \(W_{1\rightarrow2}=0\)
+        </p>
+        </div>
+    
+        <div class="casos">
+        <h6>
+            Fuerza neta variable
+        </h6>
+        <p>
+            Si la fuerza neta no fuera constante, como es el caso de la fuerza elástica en un resorte,
+            se aproxima a intervalos de desplazamiento a los que aplico una fuerza constante,
+            obteniendo como resultado la misma expresión.
+    
+            $$\int_{s_1}^{s_2}\,dW=\int_{s_1}^{s_2} F_{x} \,ds$$
+    
+            $$W_{1\rightarrow2}=\int_{l_1}^{l_2} k \cdot l \,dl$$
+    
+            $$W_{1\rightarrow2}= k \tfrac{l^2}{2} \Big|_{l_1}^{l_2}$$
+    
+            $$W_{1\rightarrow2}= \frac{1}{2} k (l_2^2 - l_1^2)$$
+        </p>
+        </div>
+    
+        <div class="casos">
+        <h6>
+            Trayectorias curvas
+        </h6>
+        <p>
+            Generalización cuando la fuerza varia en magnitud y dirección:
+            $$\int_{l_1}^{l_2}\,dW = \int_{s_1}^{s_2} F cos(\theta) \,dl$$
+    
+            $$W_{1\rightarrow2} = \int_{s_1}^{s_2} F cos(\theta) \,dl$$
+        </p>
+        </div>
+        
+        <div class="casos">
+        <h6>
+            
+        </h6>
+        <p>
+            
+        </p>
+        </div>
+        
+    </section>
+
+    <section>
+        <h2 id="energia-potencial">Energía potencial</h2>
+        <p>
+            Depende del tipo de interacción que se ejerce sobre el cuerpo (potencial, elástica)
+        </p>
+    </section>
+
+    </main>
+</body>
+</html>
