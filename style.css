@@ -31,6 +31,7 @@ section {
     padding-bottom:2em;
     margin: 2em;
     border-radius: 2vh;
+    border-width: 0;
     margin-left: auto;
     margin-right: auto;
 }
@@ -46,11 +47,12 @@ h2 {
 }
 .teorema {
     padding: 1em;
-    border-radius: 0.5em;
-    background-color:rgb(237, 218, 255);
-    margin-left: auto;
-    margin-right: auto;
-    width:95vw;
+    border-radius: 0;
+    background-image:linear-gradient(to bottom, rgb(255, 253, 218),rgba(255, 255, 255, 0.7));
+    margin-left: inherit;
+    margin-right: inherit;
+    border-bottom:rgb(237, 218, 255) 1px solid;
+    width:inherit;
 }
 .casos {
     padding: 1em;
