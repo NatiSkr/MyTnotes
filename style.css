@@ -1,5 +1,6 @@
 body {
     background-color: rgb(237, 218, 255);
+    padding-top: 40px;
 }
 
 #contents {
@@ -34,6 +35,9 @@ section {
     border-width: 0;
     margin-left: auto;
     margin-right: auto;
+}
+h1 {
+    font-size: medium;
 }
 
 h2 {
