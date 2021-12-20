@@ -74,6 +74,61 @@
     -->
     <section>
         <h2 id="trabajo">Trabajo</h2>
+        <p class="teorema">
+            El trabajo \(W\) realizado por una fuerza \(\overrightarrow{F}\) aplicada a una partícula con un ángulo 
+            \(\theta\) respecto de la dirección es igual al producto
+            de la magnitud de la componente de la fuerza correspondiente al sentido del 
+            desplazamiento por la magnitud de dicho desplazamiento \(\overrightarrow{s}\)
+
+            $$W = F cos(\theta) \cdot s$$
+
+            Implicación directa del producto entre vectores: \(W\) es un escalar
+            <br>
+            <span class="box-units">
+                Unidades: joule (J) en S.I. tal que \(1J = kg \cdot m^2 / s^2 = 10^7 ergios\)
+            </span>
+        </p>
+
+        <div class="casos">
+        <h6>Caso límite: fuerza perpendicular</h6>
+        <p>
+            Si se aplica una fuerza constante de forma tal que su dirección sea perpendicular 
+            al desplazamiento (\(\theta=90°\)) el trabajo será nulo
+        </p>
+        </div>
+
+        <div class="casos" id="trabajo-elastica">
+        <h6>Trabajo al aplicar una fuerza variable: elástica</h6>
+        <p>
+            $$\int_{x_1}^{x_2}\,dW=\int_{x_1}^{x_2} F_{x} \,dx$$
+        </p>
+        <p>
+            $$W_{1\rightarrow2}=\int_{x_1}^{x_2} k \cdot x_i \,dx$$
+        </p>   
+        <p>
+            $$W_{1\rightarrow2}= k \tfrac{x^2}{2} \Big|_{x_1}^{x_2}$$
+        </p>   
+        <p>
+            $$W_{1\rightarrow2}= \frac{1}{2} k (x_2^2 - x_1^2)$$
+        </p>
+        </div>
+
+        <div class="casos">
+        <h6>Potencia</h6>
+        <p>Expresa la rapidez con la que se efectua el trabajo</p>
+        <p>
+            $$P_{med} = \frac{\Delta W}{\Delta t}$$
+        </p>
+        <p>
+            $$P_{inst} = \lim_{\Delta t\to 0} \frac{\Delta W}{\Delta t}$$
+        </p>
+        <p class="box-units">
+            Unidades: watt (W) en S.I. tal que \(1w = 1 J s^{-1}\)
+        </p>
+        <p>
+            Se puede expresar en términos de velocidad mediante la expresión del trabajo
+        </p>
+        </div>
     </section>
     <!--
         -----------------------------------------------------------------------------------------------------
@@ -165,10 +220,29 @@
         </h6>
         <p>
             Generalización cuando la fuerza varia en magnitud y dirección:
-            $$\int_{l_1}^{l_2}\,dW = \int_{s_1}^{s_2} F cos(\theta) \,dl$$
+            $$\int_{P_1}^{P_2}\,dW = \int_{P_1}^{P_2} F cos(\theta) \,dl$$
         </p>
         <p>
-            $$W_{1\rightarrow2} = \int_{s_1}^{s_2} F cos(\theta) \,dl$$
+            Considerando que la descripción de la fuerza la hace paralela a 
+            los desplazamientos infinitesimales \(,dl\)
+            $$W_{1\rightarrow2} = \int_{P_1}^{P_2} F_{\parallel} \,dl$$
+        </p>
+        <p>
+            Luego considerando que un movimiento circular uniforme
+            $$F = (m \cdot a_{\parallel}) \hat{t} + (m \cdot a_{\perp}) \hat{n}$$ 
+            donde el segundo término no realiza trabajo
+        </p>
+        <p>
+            $$W_{1\rightarrow2} = m \int_{P_1}^{P_2} a_{\parallel} \,dl$$
+        </p>
+        <p>
+            Efectuo un cambio de variable:
+            $$W_{1\rightarrow2} = m \int_{P_1}^{P_2} \frac{\,dv}{\,dt} \,dl$$
+            $$W_{1\rightarrow2} = m \int_{P_1}^{P_2} v \,dv$$
+        </p>
+        <p>
+            Efectuando la integral de línea se obtiene el mismo resultado en general:
+            $$W_{1\rightarrow2} = \frac{1}{2} m (v_2^2 - v_1^2)_{\parallel}$$
         </p>
         </div>
     </section>
@@ -242,6 +316,34 @@
             </div>
 
             <div class="casos">
+            <h6>
+                Energía potencial elástica
+            </h6>
+            <p>
+                Al realizar trabajo se almacena energía en un cuerpo deformable
+                que recupera forma y tamaño luego de deformarse y liberar energía
+                (cinética K)
+            </p>
+            <p>
+                Suponer un cuerpo enlazado a un resorte que inicialmente se encuentra 
+                en una posición \(x_1\) tal que luego de realizar un trabajo se encuentre
+                en una posición \(x_2\). <a href="#trabajo-elastica">Hemos visto</a> que:
+                $$W_{1\rightarrow2}= \frac{1}{2} k (x_2^2 - x_1^2)$$
+            </p>
+            <p>
+                Si la fuerza elástica es la única que realiza trabajo entonces 
+                con lo visto y con el teorema de trabajo-energía
+                $$W = U_1^{el} - U_2^{el} = -\Delta U^{el} = K_2 - K_1$$
+            </p>
+            <p>
+                De forma tal que \(K1 + U_1^{el} = K2 + U_2^{el}\)
+            </p>
+            <p>
+                Entonces la energía mecánica total se conserva
+            </p>
+            </div>
+
+            <div class="casos">
                 <h6>Fuerza en una dimensión a partir de la energia potencial</h6>
                 <p>
                     Considerar un cuerpo al que se le aplica una fuerza y realiza trabajo
@@ -296,6 +398,33 @@
             <p>Sus efectos se representan en términos de <span class="box-equation">energía interna</span></p>
             <p>$$W_{otras} > 0 \Rightarrow E \uparrow$$</p>
             <p>$$W_{otras} < 0 \Rightarrow E \uparrow $$</p>
+        </div>
+
+        <div class="casos">
+            <h5>Potencial \(\phi\) de una fuerza conservativa</h5>
+            <p>
+                $$F = - \frac{\,d\phi}{\,dx} \hat{x}$$
+            </p>
+            <p>
+                $$\phi = -\int F \,dx$$
+            </p>
+            <p>
+                Al integrarlo obtengo que
+                $$\phi + C = -\int F \,dx$$
+            </p>
+            <p>
+                Sumarle al potencial una constante dada por la integración, 
+                me da la misma fuerza. Entonces hay infinitos potenciales.
+            </p>
+            <p>
+                Se dice que \(x_{eq}\) es un punto de equilibrio si 
+                la razón \(\frac{\,d\phi}{\,dx}\) es nula.
+            </p>
+            <p>
+                Si el cuadrado de la misma expresión fuera mayor a cero
+                hablamos de un equilibrio estable, pero si fuera negativa
+                decimos que en ese punto hay un equlibrio inestable.
+            </p>
         </div>
     </section>
 
