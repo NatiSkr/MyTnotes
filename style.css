@@ -1,25 +1,62 @@
+body {
+    background-color: rgb(237, 218, 255);
+}
+
+#contents {
+    margin-top: 10vh;
+}
+
+nav {
+    background-image: linear-gradient(to bottom, rgb(237, 218, 255),rgb(204, 150, 255));
+}
+
+#toggle {
+    background-color: rgb(255, 253, 218);
+}
+
+#toggle-on-menu {
+    background-color: rgb(255, 253, 218);
+}
+
 main {
     text-align: center;
     margin: 1em;
 }
-h1 {
-    padding: 1em;
+
+section {
+    background-color: rgb(255, 253, 218);
+    padding-left:0;
+    padding-top:0;
+    padding-right:0;
+    padding-bottom:2em;
+    margin: 2em;
+    border-radius: 2vh;
+    margin-left: auto;
+    margin-right: auto;
 }
+
 h2 {
     padding: 1em;
-    border-radius: 0.5em;
-    background-color: lightgoldenrodyellow;
+    border-radius: 2vh;
+    background-color: #4A148C;
+    color:#FFEBEE;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1em;
 }
 .teorema {
     padding: 1em;
     border-radius: 0.5em;
-    background-color:rgb(230, 230, 230);
+    background-color:rgb(237, 218, 255);
+    margin-left: auto;
+    margin-right: auto;
+    width:95vw;
 }
 .casos {
     padding: 1em;
-    background-color: rgb(230, 230, 230);
+    background-color: #E8EAF6;
     border-radius: 1em;
-    width:80vw;
+    width:60vw;
     /*Center div*/
     margin-left: auto;
     margin-right: auto;
@@ -34,5 +71,6 @@ h2 {
     font-style: italic;
 }
 .box-equation {
-    color: brown;
+    color: #4A148C;
+    font-weight:bold;
 }

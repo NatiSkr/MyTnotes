@@ -18,9 +18,9 @@
 
     <!--offcanvas nav-->
     <nav class="navbar navbar-light bg-light fixed-top">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#h1-title">Apuntes de Mecánica y Termodinámica</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+        <div class="container-fluid" id="nav-banner">
+            <a class="navbar-brand" href="#top">Apuntes de Mecánica y Termodinámica</a>
+            <button class="navbar-toggler" id="toggle" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
             <span class="navbar-toggler-icon"></span>
             </button>
             <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
@@ -41,34 +41,43 @@
                     <li><a class="dropdown-item" href="#trabajo">Trabajo</a></li>
                     <li><a class="dropdown-item" href="#energia-cinetica">Energía cinética</a></li>
                     <li><a class="dropdown-item" href="#energia-potencial">Energía potencial</a></li>
+                    <li><a class="dropdown-item" href="#energia-mecanica-conservacion">Energía mecánica y conservación</a></li>
+                    </ul>
+                    <!--
                     <li>
                         <hr class="dropdown-divider">
                     </li>
                     <li><a class="dropdown-item" href="#">Ver programa</a></li>
                     </ul>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Informar un error</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Informar un error</a>
+                    </li>
+                    -->
                 </ul>
+                <!--
                 <form class="d-flex">
                 <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                 <button class="btn btn-outline-success" type="submit">Buscar</button>
-                </form>
+                </form>    
+                -->
             </div>
             </div>
         </div>
         </nav>
-
+    <div id="contents">
     <main>
-    <h1 id="h1-title">Desarrollo teórico de temas</h1>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <!--The default math delimiters are $$...$$ and \[...\] for displayed mathematics, and \(...\) for in-line mathematics-->
-
+    <!--
+        -----------------------------------------------------------------------------------------------------
+    -->
     <section>
         <h2 id="trabajo">Trabajo</h2>
     </section>
-
+    <!--
+        -----------------------------------------------------------------------------------------------------
+    -->
     <section>
         <h2 id="energia-cinetica">Teorema de la energía cinética</h2>
         <p class="teorema">
@@ -87,28 +96,36 @@
             una distancia \(s\) desde \(s_1\) con una velocidad \(v_1\) hasta una posición \(s_2\) con velocidad \(v_2\) 
             y siendo \(s_2>s_1\) 
         </p>
-    
+        <p>
             El trabajo realizado se expresa como:
             $$\int_{s_1}^{s_2}\,dW=\int_{s_1}^{s_2} F \,ds$$
-    
+        </p>
+        <p>
             Por mecánica de Newton
             $$W_{1\rightarrow2}=\int_{s_1}^{s_2} m \cdot a \,ds$$
-    
+        </p> 
+        <p>
             $$W_{1\rightarrow2}= m \int_{s_1}^{s_2} \frac{\,dv}{\,dt} \,ds$$
-    
+        </p>            
+        <p>
             La expresión \(\frac{\,ds}{\,dt}\) da cuenta de la velocidad infinitesimal de desplazamiento del cuerpo:
             $$W_{1\rightarrow2}= m \int_{v_1}^{v_2} v \,dv$$
-    
+        </p>
+        <p>
             $$W_{1\rightarrow2}= m \tfrac{v^2}{2} \Big|_{v_1}^{v_2}$$
-    
+        </p>
+        <p>
             $$W_{1\rightarrow2}= \frac{1}{2} m (v_2^2 - v_1^2)$$
-    
-            Sea <span class="box-equation">\(K=\frac{1}{2} m v_i^2\)</span> la manifestación no vectorial de la 2° ley de Newton, 
+        </p>
+        <p>
+            Sea 
+            <span class="box-equation">\(K=\frac{1}{2} m v_i^2\)</span> 
+            la manifestación no vectorial de la 2° ley de Newton, 
             se define al cambio de energía cinética como:
     
             $$W_{1\rightarrow2} = K_2 - K_1 = \Delta K$$
+        </p>
         </div>
-    
         <div class="casos">
         <h6>
             Cambio nulo de velocidad entre posiciones
@@ -127,13 +144,17 @@
             Si la fuerza neta no fuera constante, como es el caso de la fuerza elástica en un resorte,
             se aproxima a intervalos de desplazamiento a los que aplico una fuerza constante,
             obteniendo como resultado la misma expresión.
-    
+        </p>
+        <p>
             $$\int_{s_1}^{s_2}\,dW=\int_{s_1}^{s_2} F_{x} \,ds$$
-    
+        </p>
+        <p>
             $$W_{1\rightarrow2}=\int_{l_1}^{l_2} k \cdot l \,dl$$
-    
+        </p>   
+        <p>
             $$W_{1\rightarrow2}= k \tfrac{l^2}{2} \Big|_{l_1}^{l_2}$$
-    
+        </p>   
+        <p>
             $$W_{1\rightarrow2}= \frac{1}{2} k (l_2^2 - l_1^2)$$
         </p>
         </div>
@@ -145,29 +166,140 @@
         <p>
             Generalización cuando la fuerza varia en magnitud y dirección:
             $$\int_{l_1}^{l_2}\,dW = \int_{s_1}^{s_2} F cos(\theta) \,dl$$
-    
+        </p>
+        <p>
             $$W_{1\rightarrow2} = \int_{s_1}^{s_2} F cos(\theta) \,dl$$
         </p>
         </div>
-        
-        <div class="casos">
-        <h6>
-            
-        </h6>
-        <p>
-            
-        </p>
-        </div>
-        
     </section>
-
+    <!--
+        -----------------------------------------------------------------------------------------------------
+    -->
     <section>
         <h2 id="energia-potencial">Energía potencial</h2>
         <p>
             Depende del tipo de interacción que se ejerce sobre el cuerpo (potencial, elástica)
         </p>
+        <div class="demo">
+        <h6>Energía potencial gravitacional</h6>
+        <p>
+            Considerar un cuerpo que cae verticalmente debido solamente al efecto de su peso 
+            desde \(y_1\) hasta \(y_2\)
+        </p>
+        <p>
+            $$\int_{y_1}^{y_2}\,dW = \int_{y_1}^{y_2} P \,dy$$
+        </p>
+        <p>
+            Recordar que en general decimos que el vector unitario de la fuerza apunta hacia abajo
+        </p>
+        <p>
+            $$W_{1\rightarrow2}^{grav} = \int_{y_1}^{y_2} - m \cdot g \,dy$$
+        </p> 
+        <p>
+            $$W_{1\rightarrow2}^{grav} = - \int_{y_2}^{y_1} m \cdot g \,dy$$
+        </p>
+        <p>
+            $$W_{1\rightarrow2}^{grav} = - m \cdot g (y_1 - y_2)$$
+        </p>
+        <p>
+            $$W_{1\rightarrow2}^{grav} =  - m \cdot g \cdot y_1 + m \cdot g \cdot y_2$$
+        </p>
+        <p>
+            Se define a la energía potencial gravitacional 
+            <span class="box-equation">\(U_{grav}=m \cdot g \cdot y_i\)</span> 
+            como una manifestación no vectorial de la 2° ley de Newton
+        </p>
+        <p>
+            Si lo expresamos por el cambio desde un estado inicial a un estado final:
+        </p>
+        <p>
+            $$W_{1\rightarrow2}^{grav} =  - (m \cdot g \cdot y_2 - m \cdot g \cdot y_1)$$
+        </p>
+        <p>
+            $$W_{1\rightarrow2}^{grav} =  - ( U_2^{grav} - U_1^{grav})$$
+        </p>
+        <p>
+            $$W_{1\rightarrow2}^{grav} =  - \Delta U^{grav}$$
+        </p>
+        </div>
+        <div class="casos">
+            <h6>
+                El signo de la variación de energía potencial
+            </h6>
+            <p>
+                Descenso: 
+                Si \(y_2 < y_1\) entonces \(\Delta U_{grav} < 0\) por lo que 
+                el peso realiza trabajo positivo \(W_{1\rightarrow2}^{grav} = (+)\)
+            </p>
+            <p>
+                Ascenso: 
+                Si \(y_2 > y_1\) entonces \(\Delta U_{grav} > 0\) por lo que 
+                el peso realiza trabajo negativo \(W_{1\rightarrow2}^{grav} = (-)\)
+            </p>
+            <p>
+                Si el cuerpo mantiene su altura respecto de la referencia, tiene energía potencial gravitatoria pero esta no varía.
+            </p>
+            </div>
+
+            <div class="casos">
+                <h6>Fuerza en una dimensión a partir de la energia potencial</h6>
+                <p>
+                    Considerar un cuerpo al que se le aplica una fuerza y realiza trabajo
+                </p>
+                <p>
+                    $$W = - \Delta U$$
+                </p>
+                <p>
+                    y se desplaza una pequeña distancia \(\Delta x\)
+                </p>
+                <p>
+                    $$F_x(x) \cdot \Delta x = - \Delta U$$
+                </p>
+                <p>
+                    $$F_x(x) = - \frac{\Delta U}{\Delta x}$$ 
+                </p>
+            </div>
+    </section>
+    <!--
+        -----------------------------------------------------------------------------------------------------
+    -->
+    <section>
+        <h2 id="energia-mecanica-conservacion">
+            Energía mecánica y conservación
+        </h2>
+        <p class="teorema">
+            <span class="cursive">
+                Se define la energía mecánica como la sumatoria de energía potencial y cinética \(E=K+U\) de un cuerpo o sistema físico.
+            </span>
+        </p>
+        <div class="casos">
+            <h6>Fuerzas conservativas de la energía mecánica</h6>
+            <p>$$E=cte$$</p>
+            <p>Son capaces de convertir bidireccionalmente entre energía potencial y energía cinética</p>
+            <p class="box-equation">Gravitacionales (peso)</p>
+            <p class="box-equation">Elástica</p>
+        </div>
+
+        <div class="casos">
+            <h6>Propiedades del trabajo realizado por fuerzas conservativas</h6>
+            <p>En una trayectoria cerrada donde se vuelve al estado inicial el trabajo total será nulo</p>
+            <p>Es independiente de la trayectoria del cuerpo, solo depende de los estados inicial y final</p>
+            <p>Es reversible</p>
+            <p>$$W_{otras} = 0$$</p>
+        </div>
+
+        <div class="casos">
+            <h6>Fuerzas no conservativas de la energía mecánica</h6>
+            <p>Disipan la energía</p>
+            <p>No permiten procesos reversibles</p>
+            <p class="box-equation">Rozamiento o fricción</p>
+            <p>Sus efectos se representan en términos de <span class="box-equation">energía interna</span></p>
+            <p>$$W_{otras} > 0 \Rightarrow E \uparrow$$</p>
+            <p>$$W_{otras} < 0 \Rightarrow E \uparrow $$</p>
+        </div>
     </section>
 
     </main>
+    </div>
 </body>
 </html>
