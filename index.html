@@ -67,29 +67,40 @@
         </nav>
     <div id="contents">
     <main>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script 
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" 
+    crossorigin="anonymous">
+    </script>
     <!--The default math delimiters are $$...$$ and \[...\] for displayed mathematics, and \(...\) for in-line mathematics-->
     <!--
         -----------------------------------------------------------------------------------------------------
     -->
-    <section>
-        <h2 id="trabajo">Trabajo</h2>
-        <p class="teorema">
+    <article id="trabajo">
+        <h2>Trabajo</h2>
+        <section class="teorema">
+        <p>
             El trabajo \(W\) realizado por una fuerza \(\overrightarrow{F}\) aplicada a una partícula con un ángulo 
             \(\theta\) respecto de la dirección es igual al producto
             de la magnitud de la componente de la fuerza correspondiente al sentido del 
             desplazamiento por la magnitud de dicho desplazamiento \(\overrightarrow{s}\)
-
-            $$W = F cos(\theta) \cdot s$$
-
-            Implicación directa del producto entre vectores: \(W\) es un escalar
-            <br>
-            <span class="box-units">
-                Unidades: joule (J) en S.I. tal que \(1J = kg \cdot m^2 / s^2 = 10^7 ergios\)
-            </span>
         </p>
+        <p>
+            $$W = F cos(\theta) \cdot s$$
+        </p>
+        <p>
+            Implicación directa del producto entre vectores: \(W\) es un escalar
+        </p>   
+        <br>
+        <p>
+        <span class="box-units">
+            Unidades: joule (J) en S.I. tal que \(1J = kg \cdot m^2 / s^2 = 10^7 ergios\)
+        </span>
+        </p>
+        </section>     
 
-        <div class="casos">
+        <section class="casos">
+        <div>
         <h6>Caso límite: fuerza perpendicular</h6>
         <p>
             Si se aplica una fuerza constante de forma tal que su dirección sea perpendicular 
@@ -97,7 +108,7 @@
         </p>
         </div>
 
-        <div class="casos" id="trabajo-elastica">
+        <div id="trabajo-elastica">
         <h6>Trabajo al aplicar una fuerza variable: elástica</h6>
         <p>
             $$\int_{x_1}^{x_2}\,dW=\int_{x_1}^{x_2} F_{x} \,dx$$
@@ -112,8 +123,8 @@
             $$W_{1\rightarrow2}= \frac{1}{2} k (x_2^2 - x_1^2)$$
         </p>
         </div>
-
-        <div class="casos">
+        
+        <div>
         <h6>Potencia</h6>
         <p>Expresa la rapidez con la que se efectua el trabajo</p>
         <p>
@@ -129,20 +140,26 @@
             Se puede expresar en términos de velocidad mediante la expresión del trabajo
         </p>
         </div>
-    </section>
+        </section>
+    </article>
     <!--
         -----------------------------------------------------------------------------------------------------
     -->
-    <section>
-        <h2 id="energia-cinetica">Teorema de la energía cinética</h2>
-        <p class="teorema">
+    <article id="energia-cinetica">
+        <h2>Teorema de la energía cinética</h2>
+        <section class="teorema">
+        <p>
             El teorema de la energía cinética establece que 
             <span class="cursive">el trabajo realizado por la fuerza neta (suma de todas las fuerzas) aplicada a 
             una partícula es igual al cambio que experimenta la energía cinética de dicha partícula.</span>
         </p>
-        <p>Depende del movimiento del cuerpo</p>
-    
-        <div class="demo"> 
+        <p>
+            Depende del movimiento del cuerpo
+        </p>    
+        </section>
+        
+        <section class="demo">
+        <div> 
         <h5>
             Demostración
         </h5>
@@ -181,7 +198,10 @@
             $$W_{1\rightarrow2} = K_2 - K_1 = \Delta K$$
         </p>
         </div>
-        <div class="casos">
+        </section>
+
+        <section class="casos">
+        <div>
         <h6>
             Cambio nulo de velocidad entre posiciones
         </h6>
@@ -191,7 +211,7 @@
         </p>
         </div>
     
-        <div class="casos">
+        <div>
         <h6>
             Fuerza neta variable
         </h6>
@@ -214,7 +234,7 @@
         </p>
         </div>
     
-        <div class="casos">
+        <div>
         <h6>
             Trayectorias curvas
         </h6>
@@ -245,16 +265,21 @@
             $$W_{1\rightarrow2} = \frac{1}{2} m (v_2^2 - v_1^2)_{\parallel}$$
         </p>
         </div>
-    </section>
+        </section>
+    </article>
     <!--
         -----------------------------------------------------------------------------------------------------
     -->
-    <section>
-        <h2 id="energia-potencial">Energía potencial</h2>
+    <article id="energia-potencial">
+        <h2>Energía potencial</h2>
+        <section class="teorema">
         <p>
             Depende del tipo de interacción que se ejerce sobre el cuerpo (potencial, elástica)
         </p>
-        <div class="demo">
+        </section>
+        
+        <section class="demo">
+        <div>
         <h6>Energía potencial gravitacional</h6>
         <p>
             Considerar un cuerpo que cae verticalmente debido solamente al efecto de su peso 
@@ -296,7 +321,10 @@
             $$W_{1\rightarrow2}^{grav} =  - \Delta U^{grav}$$
         </p>
         </div>
-        <div class="casos">
+        </section>
+
+        <section class="casos">
+        <div>
             <h6>
                 El signo de la variación de energía potencial
             </h6>
@@ -313,9 +341,9 @@
             <p>
                 Si el cuerpo mantiene su altura respecto de la referencia, tiene energía potencial gravitatoria pero esta no varía.
             </p>
-            </div>
+        </div>
 
-            <div class="casos">
+        <div>
             <h6>
                 Energía potencial elástica
             </h6>
@@ -341,40 +369,45 @@
             <p>
                 Entonces la energía mecánica total se conserva
             </p>
-            </div>
+        </div>
 
-            <div class="casos">
-                <h6>Fuerza en una dimensión a partir de la energia potencial</h6>
-                <p>
-                    Considerar un cuerpo al que se le aplica una fuerza y realiza trabajo
-                </p>
-                <p>
-                    $$W = - \Delta U$$
-                </p>
-                <p>
-                    y se desplaza una pequeña distancia \(\Delta x\)
-                </p>
-                <p>
-                    $$F_x(x) \cdot \Delta x = - \Delta U$$
-                </p>
-                <p>
-                    $$F_x(x) = - \frac{\Delta U}{\Delta x}$$ 
-                </p>
-            </div>
-    </section>
+        <div>
+            <h6>Fuerza en una dimensión a partir de la energia potencial</h6>
+            <p>
+                Considerar un cuerpo al que se le aplica una fuerza y realiza trabajo
+            </p>
+            <p>
+                $$W = - \Delta U$$
+            </p>
+            <p>
+                y se desplaza una pequeña distancia \(\Delta x\)
+            </p>
+            <p>
+                $$F_x(x) \cdot \Delta x = - \Delta U$$
+            </p>
+            <p>
+                $$F_x(x) = - \frac{\Delta U}{\Delta x}$$ 
+            </p>
+        </div>
+        </section>
+    </article>
     <!--
         -----------------------------------------------------------------------------------------------------
     -->
-    <section>
-        <h2 id="energia-mecanica-conservacion">
+    <article id="energia-mecanica-conservacion">
+        <h2>
             Energía mecánica y conservación
         </h2>
-        <p class="teorema">
-            <span class="cursive">
-                Se define la energía mecánica como la sumatoria de energía potencial y cinética \(E=K+U\) de un cuerpo o sistema físico.
-            </span>
-        </p>
-        <div class="casos">
+        <section class="teorema">
+        <p>
+        <span class="cursive">
+            Se define la energía mecánica como la sumatoria de energía potencial y cinética \(E=K+U\) de un cuerpo o sistema físico.
+        </span>
+        </p>    
+        </section>
+        
+        <section class="casos">
+        <div>
             <h6>Fuerzas conservativas de la energía mecánica</h6>
             <p>$$E=cte$$</p>
             <p>Son capaces de convertir bidireccionalmente entre energía potencial y energía cinética</p>
@@ -382,7 +415,7 @@
             <p class="box-equation">Elástica</p>
         </div>
 
-        <div class="casos">
+        <div>
             <h6>Propiedades del trabajo realizado por fuerzas conservativas</h6>
             <p>En una trayectoria cerrada donde se vuelve al estado inicial el trabajo total será nulo</p>
             <p>Es independiente de la trayectoria del cuerpo, solo depende de los estados inicial y final</p>
@@ -390,7 +423,7 @@
             <p>$$W_{otras} = 0$$</p>
         </div>
 
-        <div class="casos">
+        <div>
             <h6>Fuerzas no conservativas de la energía mecánica</h6>
             <p>Disipan la energía</p>
             <p>No permiten procesos reversibles</p>
@@ -400,7 +433,7 @@
             <p>$$W_{otras} < 0 \Rightarrow E \uparrow $$</p>
         </div>
 
-        <div class="casos">
+        <div>
             <h5>Potencial \(\phi\) de una fuerza conservativa</h5>
             <p>
                 $$F = - \frac{\,d\phi}{\,dx} \hat{x}$$
@@ -426,7 +459,8 @@
                 decimos que en ese punto hay un equlibrio inestable.
             </p>
         </div>
-    </section>
+        </section>
+    </article>
 
     </main>
     </div>
