@@ -5,10 +5,15 @@
     <!--Responsive-->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <link href="style.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
     <!--MathJax-->
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <!--The default math delimiters are $$...$$ and \[...\] for displayed mathematics, and \(...\) for in-line mathematics-->
+    <!--Escape backlash in JS with double backlash \\-->
+    <!--
+        -----------------------------------------------------------------------------------------------------
+    -->
     <title>MyTnotes</title>
   </head>
 
@@ -72,395 +77,40 @@
     integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" 
     crossorigin="anonymous">
     </script>
-    <!--The default math delimiters are $$...$$ and \[...\] for displayed mathematics, and \(...\) for in-line mathematics-->
+    
+    <!------------------------------------------------------------------>
+    
     <!--
-        -----------------------------------------------------------------------------------------------------
+    <article id="cinematica">
+        <script src="js/cinematica.js"></script>
+    </article>    
     -->
+
+    <!------------------------------------------------------------------>
+
     <article id="trabajo">
-        <h2>Trabajo</h2>
-        <section class="teorema">
-        <p>
-            El trabajo \(W\) realizado por una fuerza \(\overrightarrow{F}\) aplicada a una partícula con un ángulo 
-            \(\theta\) respecto de la dirección es igual al producto
-            de la magnitud de la componente de la fuerza correspondiente al sentido del 
-            desplazamiento por la magnitud de dicho desplazamiento \(\overrightarrow{s}\)
-        </p>
-        <p>
-            $$W = F cos(\theta) \cdot s$$
-        </p>
-        <p>
-            Implicación directa del producto entre vectores: \(W\) es un escalar
-        </p>   
-        <br>
-        <p>
-        <span class="box-units">
-            Unidades: joule (J) en S.I. tal que \(1J = kg \cdot m^2 / s^2 = 10^7 ergios\)
-        </span>
-        </p>
-        </section>     
-
-        <section class="casos">
-        <div>
-        <h6>Caso límite: fuerza perpendicular</h6>
-        <p>
-            Si se aplica una fuerza constante de forma tal que su dirección sea perpendicular 
-            al desplazamiento (\(\theta=90°\)) el trabajo será nulo
-        </p>
-        </div>
-
-        <div id="trabajo-elastica">
-        <h6>Trabajo al aplicar una fuerza variable: elástica</h6>
-        <p>
-            $$\int_{x_1}^{x_2}\,dW=\int_{x_1}^{x_2} F_{x} \,dx$$
-        </p>
-        <p>
-            $$W_{1\rightarrow2}=\int_{x_1}^{x_2} k \cdot x_i \,dx$$
-        </p>   
-        <p>
-            $$W_{1\rightarrow2}= k \tfrac{x^2}{2} \Big|_{x_1}^{x_2}$$
-        </p>   
-        <p>
-            $$W_{1\rightarrow2}= \frac{1}{2} k (x_2^2 - x_1^2)$$
-        </p>
-        </div>
-        
-        <div>
-        <h6>Potencia</h6>
-        <p>Expresa la rapidez con la que se efectua el trabajo</p>
-        <p>
-            $$P_{med} = \frac{\Delta W}{\Delta t}$$
-        </p>
-        <p>
-            $$P_{inst} = \lim_{\Delta t\to 0} \frac{\Delta W}{\Delta t}$$
-        </p>
-        <p class="box-units">
-            Unidades: watt (W) en S.I. tal que \(1w = 1 J s^{-1}\)
-        </p>
-        <p>
-            Se puede expresar en términos de velocidad mediante la expresión del trabajo
-        </p>
-        </div>
-        </section>
+        <script src="js/trabajo.js"></script>
     </article>
-    <!--
-        -----------------------------------------------------------------------------------------------------
-    -->
+
+    <!------------------------------------------------------------------>
+
     <article id="energia-cinetica">
-        <h2>Teorema de la energía cinética</h2>
-        <section class="teorema">
-        <p>
-            El teorema de la energía cinética establece que 
-            <span class="cursive">el trabajo realizado por la fuerza neta (suma de todas las fuerzas) aplicada a 
-            una partícula es igual al cambio que experimenta la energía cinética de dicha partícula.</span>
-        </p>
-        <p>
-            Depende del movimiento del cuerpo
-        </p>    
-        </section>
-        
-        <section class="demo">
-        <div> 
-        <h5>
-            Demostración
-        </h5>
-        <p>
-            Considerar un cuerpo de masa \(m\) que se desplaza por la aplicación de una fuerza neta constante \(F\) 
-            una distancia \(s\) desde \(s_1\) con una velocidad \(v_1\) hasta una posición \(s_2\) con velocidad \(v_2\) 
-            y siendo \(s_2>s_1\) 
-        </p>
-        <p>
-            El trabajo realizado se expresa como:
-            $$\int_{s_1}^{s_2}\,dW=\int_{s_1}^{s_2} F \,ds$$
-        </p>
-        <p>
-            Por mecánica de Newton
-            $$W_{1\rightarrow2}=\int_{s_1}^{s_2} m \cdot a \,ds$$
-        </p> 
-        <p>
-            $$W_{1\rightarrow2}= m \int_{s_1}^{s_2} \frac{\,dv}{\,dt} \,ds$$
-        </p>            
-        <p>
-            La expresión \(\frac{\,ds}{\,dt}\) da cuenta de la velocidad infinitesimal de desplazamiento del cuerpo:
-            $$W_{1\rightarrow2}= m \int_{v_1}^{v_2} v \,dv$$
-        </p>
-        <p>
-            $$W_{1\rightarrow2}= m \tfrac{v^2}{2} \Big|_{v_1}^{v_2}$$
-        </p>
-        <p>
-            $$W_{1\rightarrow2}= \frac{1}{2} m (v_2^2 - v_1^2)$$
-        </p>
-        <p>
-            Sea 
-            <span class="box-equation">\(K=\frac{1}{2} m v_i^2\)</span> 
-            la manifestación no vectorial de la 2° ley de Newton, 
-            se define al cambio de energía cinética como:
-    
-            $$W_{1\rightarrow2} = K_2 - K_1 = \Delta K$$
-        </p>
-        </div>
-        </section>
-
-        <section class="casos">
-        <div>
-        <h6>
-            Cambio nulo de velocidad entre posiciones
-        </h6>
-        <p>
-            Si no hubiera cambio de velocidad entre las posiciones \(x_1\) y \(x_2\) entonces \(\Delta K=0\)     
-            y por ende \(W_{1\rightarrow2}=0\)
-        </p>
-        </div>
-    
-        <div>
-        <h6>
-            Fuerza neta variable
-        </h6>
-        <p>
-            Si la fuerza neta no fuera constante, como es el caso de la fuerza elástica en un resorte,
-            se aproxima a intervalos de desplazamiento a los que aplico una fuerza constante,
-            obteniendo como resultado la misma expresión.
-        </p>
-        <p>
-            $$\int_{s_1}^{s_2}\,dW=\int_{s_1}^{s_2} F_{x} \,ds$$
-        </p>
-        <p>
-            $$W_{1\rightarrow2}=\int_{l_1}^{l_2} k \cdot l \,dl$$
-        </p>   
-        <p>
-            $$W_{1\rightarrow2}= k \tfrac{l^2}{2} \Big|_{l_1}^{l_2}$$
-        </p>   
-        <p>
-            $$W_{1\rightarrow2}= \frac{1}{2} k (l_2^2 - l_1^2)$$
-        </p>
-        </div>
-    
-        <div>
-        <h6>
-            Trayectorias curvas
-        </h6>
-        <p>
-            Generalización cuando la fuerza varia en magnitud y dirección:
-            $$\int_{P_1}^{P_2}\,dW = \int_{P_1}^{P_2} F cos(\theta) \,dl$$
-        </p>
-        <p>
-            Considerando que la descripción de la fuerza la hace paralela a 
-            los desplazamientos infinitesimales \(,dl\)
-            $$W_{1\rightarrow2} = \int_{P_1}^{P_2} F_{\parallel} \,dl$$
-        </p>
-        <p>
-            Luego considerando que un movimiento circular uniforme
-            $$F = (m \cdot a_{\parallel}) \hat{t} + (m \cdot a_{\perp}) \hat{n}$$ 
-            donde el segundo término no realiza trabajo
-        </p>
-        <p>
-            $$W_{1\rightarrow2} = m \int_{P_1}^{P_2} a_{\parallel} \,dl$$
-        </p>
-        <p>
-            Efectuo un cambio de variable:
-            $$W_{1\rightarrow2} = m \int_{P_1}^{P_2} \frac{\,dv}{\,dt} \,dl$$
-            $$W_{1\rightarrow2} = m \int_{P_1}^{P_2} v \,dv$$
-        </p>
-        <p>
-            Efectuando la integral de línea se obtiene el mismo resultado en general:
-            $$W_{1\rightarrow2} = \frac{1}{2} m (v_2^2 - v_1^2)_{\parallel}$$
-        </p>
-        </div>
-        </section>
+        <script src="js/energia-cinetica.js"></script>
     </article>
-    <!--
-        -----------------------------------------------------------------------------------------------------
-    -->
+    
+    <!------------------------------------------------------------------>
+
     <article id="energia-potencial">
-        <h2>Energía potencial</h2>
-        <section class="teorema">
-        <p>
-            Depende del tipo de interacción que se ejerce sobre el cuerpo (potencial, elástica)
-        </p>
-        </section>
-        
-        <section class="demo">
-        <div>
-        <h6>Energía potencial gravitacional</h6>
-        <p>
-            Considerar un cuerpo que cae verticalmente debido solamente al efecto de su peso 
-            desde \(y_1\) hasta \(y_2\)
-        </p>
-        <p>
-            $$\int_{y_1}^{y_2}\,dW = \int_{y_1}^{y_2} P \,dy$$
-        </p>
-        <p>
-            Recordar que en general decimos que el vector unitario de la fuerza apunta hacia abajo
-        </p>
-        <p>
-            $$W_{1\rightarrow2}^{grav} = \int_{y_1}^{y_2} - m \cdot g \,dy$$
-        </p> 
-        <p>
-            $$W_{1\rightarrow2}^{grav} = - \int_{y_2}^{y_1} m \cdot g \,dy$$
-        </p>
-        <p>
-            $$W_{1\rightarrow2}^{grav} = - m \cdot g (y_1 - y_2)$$
-        </p>
-        <p>
-            $$W_{1\rightarrow2}^{grav} =  - m \cdot g \cdot y_1 + m \cdot g \cdot y_2$$
-        </p>
-        <p>
-            Se define a la energía potencial gravitacional 
-            <span class="box-equation">\(U_{grav}=m \cdot g \cdot y_i\)</span> 
-            como una manifestación no vectorial de la 2° ley de Newton
-        </p>
-        <p>
-            Si lo expresamos por el cambio desde un estado inicial a un estado final:
-        </p>
-        <p>
-            $$W_{1\rightarrow2}^{grav} =  - (m \cdot g \cdot y_2 - m \cdot g \cdot y_1)$$
-        </p>
-        <p>
-            $$W_{1\rightarrow2}^{grav} =  - ( U_2^{grav} - U_1^{grav})$$
-        </p>
-        <p>
-            $$W_{1\rightarrow2}^{grav} =  - \Delta U^{grav}$$
-        </p>
-        </div>
-        </section>
-
-        <section class="casos">
-        <div>
-            <h6>
-                El signo de la variación de energía potencial
-            </h6>
-            <p>
-                Descenso: 
-                Si \(y_2 < y_1\) entonces \(\Delta U_{grav} < 0\) por lo que 
-                el peso realiza trabajo positivo \(W_{1\rightarrow2}^{grav} = (+)\)
-            </p>
-            <p>
-                Ascenso: 
-                Si \(y_2 > y_1\) entonces \(\Delta U_{grav} > 0\) por lo que 
-                el peso realiza trabajo negativo \(W_{1\rightarrow2}^{grav} = (-)\)
-            </p>
-            <p>
-                Si el cuerpo mantiene su altura respecto de la referencia, tiene energía potencial gravitatoria pero esta no varía.
-            </p>
-        </div>
-
-        <div>
-            <h6>
-                Energía potencial elástica
-            </h6>
-            <p>
-                Al realizar trabajo se almacena energía en un cuerpo deformable
-                que recupera forma y tamaño luego de deformarse y liberar energía
-                (cinética K)
-            </p>
-            <p>
-                Suponer un cuerpo enlazado a un resorte que inicialmente se encuentra 
-                en una posición \(x_1\) tal que luego de realizar un trabajo se encuentre
-                en una posición \(x_2\). <a href="#trabajo-elastica">Hemos visto</a> que:
-                $$W_{1\rightarrow2}= \frac{1}{2} k (x_2^2 - x_1^2)$$
-            </p>
-            <p>
-                Si la fuerza elástica es la única que realiza trabajo entonces 
-                con lo visto y con el teorema de trabajo-energía
-                $$W = U_1^{el} - U_2^{el} = -\Delta U^{el} = K_2 - K_1$$
-            </p>
-            <p>
-                De forma tal que \(K1 + U_1^{el} = K2 + U_2^{el}\)
-            </p>
-            <p>
-                Entonces la energía mecánica total se conserva
-            </p>
-        </div>
-
-        <div>
-            <h6>Fuerza en una dimensión a partir de la energia potencial</h6>
-            <p>
-                Considerar un cuerpo al que se le aplica una fuerza y realiza trabajo
-            </p>
-            <p>
-                $$W = - \Delta U$$
-            </p>
-            <p>
-                y se desplaza una pequeña distancia \(\Delta x\)
-            </p>
-            <p>
-                $$F_x(x) \cdot \Delta x = - \Delta U$$
-            </p>
-            <p>
-                $$F_x(x) = - \frac{\Delta U}{\Delta x}$$ 
-            </p>
-        </div>
-        </section>
+        <script src="js/energia-potencial.js"></script>
     </article>
-    <!--
-        -----------------------------------------------------------------------------------------------------
-    -->
+    
+    <!------------------------------------------------------------------>
+
     <article id="energia-mecanica-conservacion">
-        <h2>
-            Energía mecánica y conservación
-        </h2>
-        <section class="teorema">
-        <p>
-        <span class="cursive">
-            Se define la energía mecánica como la sumatoria de energía potencial y cinética \(E=K+U\) de un cuerpo o sistema físico.
-        </span>
-        </p>    
-        </section>
-        
-        <section class="casos">
-        <div>
-            <h6>Fuerzas conservativas de la energía mecánica</h6>
-            <p>$$E=cte$$</p>
-            <p>Son capaces de convertir bidireccionalmente entre energía potencial y energía cinética</p>
-            <p class="box-equation">Gravitacionales (peso)</p>
-            <p class="box-equation">Elástica</p>
-        </div>
-
-        <div>
-            <h6>Propiedades del trabajo realizado por fuerzas conservativas</h6>
-            <p>En una trayectoria cerrada donde se vuelve al estado inicial el trabajo total será nulo</p>
-            <p>Es independiente de la trayectoria del cuerpo, solo depende de los estados inicial y final</p>
-            <p>Es reversible</p>
-            <p>$$W_{otras} = 0$$</p>
-        </div>
-
-        <div>
-            <h6>Fuerzas no conservativas de la energía mecánica</h6>
-            <p>Disipan la energía</p>
-            <p>No permiten procesos reversibles</p>
-            <p class="box-equation">Rozamiento o fricción</p>
-            <p>Sus efectos se representan en términos de <span class="box-equation">energía interna</span></p>
-            <p>$$W_{otras} > 0 \Rightarrow E \uparrow$$</p>
-            <p>$$W_{otras} < 0 \Rightarrow E \uparrow $$</p>
-        </div>
-
-        <div>
-            <h5>Potencial \(\phi\) de una fuerza conservativa</h5>
-            <p>
-                $$F = - \frac{\,d\phi}{\,dx} \hat{x}$$
-            </p>
-            <p>
-                $$\phi = -\int F \,dx$$
-            </p>
-            <p>
-                Al integrarlo obtengo que
-                $$\phi + C = -\int F \,dx$$
-            </p>
-            <p>
-                Sumarle al potencial una constante dada por la integración, 
-                me da la misma fuerza. Entonces hay infinitos potenciales.
-            </p>
-            <p>
-                Se dice que \(x_{eq}\) es un punto de equilibrio si 
-                la razón \(\frac{\,d\phi}{\,dx}\) es nula.
-            </p>
-            <p>
-                Si el cuadrado de la misma expresión fuera mayor a cero
-                hablamos de un equilibrio estable, pero si fuera negativa
-                decimos que en ese punto hay un equlibrio inestable.
-            </p>
-        </div>
-        </section>
+        <script src="js/energia-mecanica-conservacion.js"></script>
     </article>
+
+    <!------------------------------------------------------------------>
 
     </main>
     </div>
